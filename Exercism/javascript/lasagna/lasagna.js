@@ -46,14 +46,21 @@ export const EXPECTED_MINUTES_IN_OVEN = 40;
  * @returns {number} the number of minutes remaining
  */
 export function remainingMinutesInOven(actualMinutesInOven) {
-  if (actualMinutesInOven < EXPECTED_MINUTES_IN_OVEN)
-  {
-    return EXPECTED_MINUTES_IN_OVEN - actualMinutesInOven;
-  }
-  else
-  {
-    return 0;
-  }
+
+  /// Resolution without terneries 
+
+  // if (actualMinutesInOven < EXPECTED_MINUTES_IN_OVEN)
+  // {
+  //   return EXPECTED_MINUTES_IN_OVEN - actualMinutesInOven;
+  // }
+  // else
+  // {
+  //   return 0;
+  // }
+
+  /// Resolution with terneries 
+  return actualMinutesInOven < EXPECTED_MINUTES_IN_OVEN ? 
+    EXPECTED_MINUTES_IN_OVEN - actualMinutesInOven : 0;
 }
 
 /**
